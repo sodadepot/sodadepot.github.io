@@ -85,13 +85,21 @@
             transition: transform 1s ease, opacity 1s ease;
         }
 
+        .rightimgDiv{
+            position: absolute;
+            width: 148px;
+            height: 100%;
+            right: 0;
+        }
+
         .right-img {
             position: absolute;
-            top: 15%;
+            width: 100%;
+            top: 0;
             right: 0;
             transform: translateY(-50%);
             opacity: 0;
-            clip-path: inset(0 50% 0 0);
+            /* clip-path: inset(0 50% 0 0); */
             object-fit: contain;
             max-width: 100vw;
             height: auto;
@@ -108,7 +116,7 @@
         }
 
         .right-img {
-            right: -200px;
+            transform: translateX(50%);
         }
 
         .left-img {
@@ -146,7 +154,9 @@
         <div class="banner">
             <img src="images/board.jpg" alt="Soda Depot Logo" id="boardImg">
         </div>
-        <img src="images/right.png" alt="Right Image" class="right-img" id="rightImg">
+        <div class="rightimgDiv">
+            <img src="images/right2.png" alt="Right Image" class="right-img" id="rightImg">
+        </div>
         <img src="images/left.png" alt="Left Image" class="left-img" id="leftImg">
         <div class="accordion" id="sodaMenu"></div>
     </div>
@@ -173,7 +183,7 @@
 
             // Show right image
             setTimeout(() => {
-                rightImg.style.transform = 'translateX(-50px)';
+                rightImg.style.transform = 'translateX(0px)';
                 rightImg.style.opacity = '1';
             }, 1200);
 
