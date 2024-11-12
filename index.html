@@ -20,6 +20,11 @@
         <img src="assets/images/left.png" alt="Left Image" class="left-img" id="leftImg">
         <div class="accordion" id="sodaMenu"></div>
     </div>
+    <div class="overlay">
+        <div class="modaldiv">
+            Owner item <br> Contact
+        </div>
+    </div>
     <!-- Footer -->
     <footer class="text-white text-center py-3 mt-4" style="background-color: #3863b1;">
         <p>&copy; 2024 Soda Depot. All rights reserved.</p>
@@ -65,6 +70,24 @@
                 });
             }, 2200);
         }
+
+        document.querySelector('.banner').addEventListener('click', () => {
+            const overlay = document.querySelector('.overlay');
+            const modal = document.querySelector('.modaldiv');
+
+            overlay.classList.add('show');
+            setTimeout(() => modal.classList.add('show'), 5);
+        });
+
+        document.querySelector('.overlay').addEventListener('click', () => {
+            const overlay = document.querySelector('.overlay');
+            const modal = document.querySelector('.modaldiv');
+
+            modal.classList.remove('show');
+            setTimeout(() => overlay.classList.remove('show'), 300); // Delay hiding overlay until animation completes
+        });
+
+
 
         function toggleSection(sectionId, containerId) {
             const container = document.getElementById(containerId);

@@ -63,7 +63,7 @@ body {
     overflow-y: auto;
 }
 
-.expanded-section .menu-header{
+.expanded-section .menu-header {
     padding: 8px 15px;
 }
 
@@ -82,7 +82,7 @@ body {
     transition: transform 1s ease, opacity 1s ease;
 }
 
-.rightimgDiv{
+.rightimgDiv {
     position: absolute;
     width: 148px;
     height: 100%;
@@ -120,6 +120,47 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Overlay to dim the background */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Keeps it above other content */
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.modaldiv {
+    background: #3863b1;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    max-height: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modaldiv.show {
+    transform: scale(1);
+}
+
+
 
 @keyframes float {
 
