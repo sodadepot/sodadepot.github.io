@@ -45,7 +45,7 @@ function toggleSection(sectionId, containerId) {
     }
 }
 
-fetch('data/sodaMenu.json')
+fetch('../data/sodaMenu.json')
     .then(response => response.json())
     .then(data => {
         const menuContainer = document.getElementById('sodaMenu');
