@@ -28,6 +28,7 @@ body {
     cursor: pointer;
     user-select: none;
     border-radius: 8px;
+    transition: padding 0.3s ease;
 }
 
 .menu-item-container {
@@ -59,6 +60,10 @@ body {
     background: #f0f5ffbb;
     max-height: 1000px;
     overflow-y: auto;
+}
+
+.expanded-section .menu-header{
+    padding: 8px 15px;
 }
 
 .banner {
