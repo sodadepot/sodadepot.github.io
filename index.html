@@ -47,13 +47,13 @@
             setTimeout(() => {
                 rightImg.style.transform = 'translateX(0px)';
                 rightImg.style.opacity = '1';
-            }, 1200);
+            }, 800);
 
             // Show left image
             setTimeout(() => {
                 leftImg.style.transform = 'translateX(50px)';
                 leftImg.style.opacity = '1';
-            }, 2200);
+            }, 1500);
 
             // Trigger fade-up animation for sections
             setTimeout(() => {
@@ -63,7 +63,7 @@
                         section.classList.add('fade-up');
                     }, index * 100);
                 });
-            }, 3200);
+            }, 2200);
         }
 
         function toggleSection(sectionId, containerId) {
