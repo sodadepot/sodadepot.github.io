@@ -1,6 +1,7 @@
 body {
     font-family: 'Greenwich Light', sans-serif;
     background-color: #fffbf2;
+    user-select: none;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
