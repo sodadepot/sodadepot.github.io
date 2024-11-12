@@ -78,14 +78,17 @@
 
             overlay.classList.add('show');
             setTimeout(() => modal.classList.add('show'), 5);
-        });
 
+            document.body.classList.add('modal-open');
+        });
+        
         document.querySelector('.overlay').addEventListener('click', () => {
             const overlay = document.querySelector('.overlay');
             const modal = document.querySelector('.modaldiv');
-
+            
             modal.classList.remove('show');
             setTimeout(() => overlay.classList.remove('show'), 300); // Delay hiding overlay until animation completes
+            document.body.classList.remove('modal-open');
         });
 
 

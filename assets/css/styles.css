@@ -7,6 +7,11 @@ body {
     overflow-x: hidden;
 }
 
+body.modal-open {
+    overflow: hidden;
+    /* Disable scrolling on the body */
+}
+
 .menu-section {
     margin: 5px 0;
     overflow: hidden;
