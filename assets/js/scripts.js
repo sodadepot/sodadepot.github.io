@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+    animateImages();
+});
+
 function animateImages() {
     // Board image animation
     const boardImg = document.getElementById('boardImg');
