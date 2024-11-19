@@ -50,10 +50,12 @@ body.modal-open {
     padding: 5px 10px;
     background: #cddbf7bb;
     border-radius: 5px;
-    opacity: 0.8;
 }
 
 .menu-item:hover {
+    background: #93b7ffbb;
+}
+.menu-item:focus {
     background: #93b7ffbb;
 }
 
