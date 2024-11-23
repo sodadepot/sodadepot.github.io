@@ -50,12 +50,11 @@ body.modal-open {
     padding: 5px 10px;
     background: #cddbf7bb;
     border-radius: 5px;
+    pointer-events: auto;
+    cursor: pointer;
 }
 
-.menu-item:hover {
-    background: #93b7ffbb;
-}
-.menu-item:focus {
+.menu-item.selected {
     background: #93b7ffbb;
 }
 
@@ -81,6 +80,7 @@ body.modal-open {
 
 .banner {
     text-align: center;
+    cursor: pointer;
     margin-bottom: 5px;
     transition: transform 1s ease, opacity 1s ease;
     animation: float 5s ease-in-out infinite;

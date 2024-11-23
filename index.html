@@ -25,7 +25,7 @@
         <div class="modaldiv">
             Shop Owner: Jay Rathod <br>
             Contact: +91 82007 44014
-        </div>        
+        </div>
     </div>
     <!-- Footer -->
     <footer class="text-white text-center py-3 mt-4" style="background-color: #3863b1;">
@@ -82,17 +82,26 @@
 
             document.body.classList.add('modal-open');
         });
-        
+
         document.querySelector('.overlay').addEventListener('click', () => {
             const overlay = document.querySelector('.overlay');
             const modal = document.querySelector('.modaldiv');
-            
+
             modal.classList.remove('show');
             setTimeout(() => overlay.classList.remove('show'), 300); // Delay hiding overlay until animation completes
             document.body.classList.remove('modal-open');
         });
 
-
+        document.getElementById('sodaMenu').addEventListener('click', (event) => {
+            if (event.target.classList.contains('menu-item')) {
+                const menuItem = event.target;
+                if (menuItem.classList.contains('selected')) {
+                    menuItem.classList.remove('selected');
+                } else {
+                    menuItem.classList.add('selected');
+                }
+            }
+        });
 
         function toggleSection(sectionId, containerId) {
             const container = document.getElementById(containerId);
@@ -150,6 +159,7 @@
                 setTimeout(animateImages, 100);
             })
             .catch(error => console.error('Error loading menu data:', error));
+
     </script>
     <!-- <script src="assets/js/scripts.js" defer></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
